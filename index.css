@@ -341,3 +341,23 @@ img.barcode {
     padding: 5px;
     box-shadow:5px 10px #eeecec ;
 }
+
+.container .box-container .card{
+    background-color: #fff;
+    padding:20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    display: none;
+  }
+
+  .container .box-container .card:nth-child(1){
+  display: inline-flex;
+
+}
+
+@media (min-width:450px){
+
+    .container .box-container .card{
+         display: none;
+    }
+}
