@@ -350,8 +350,9 @@ img.barcode {
     display: none;
   }
 
-  .container .box-container .card:nth-child(1){
-  display: inline-flex;
+  .container .box-container .card:nth-child(1),
+  .container .box-container .card:nth-child(2){
+  display: inline-block;
 
 
 }
