@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.layout{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    min-height: 90px;
+    max-height: 110px;
+    border-bottom: 1px solid #EAE9E9;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    /* margin */
+    
+    
+    }
+    
+    .logo {
+    display: flex;
+    margin-left: 3%;
+    margin-right: auto;
+    width: 80px;
+    height: 80px;
+    
+    }
+    
+    .btn{
+    appearance: none;
+    border-style: none;
+    background-color: #3465E0;
+    color: white;
+    height: 40px;
+    display: flex;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition:  box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+    }
+    
+    .btn:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition:  box-shadow 0.3s ease-in-out, scale 0.3s ease-in-out;
+    
+       scale: 1.05;
+    
+    }
+
+
+.Layout {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 10% 0;
+  align-items: center;
+}
+  @media screen and (max-width: 700px) {
+    .Layout{
+        flex-direction: column-reverse;
+        gap: 10%;
+    }
+    
+  }
+ 
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.2em;
+    color: black;
+}
+  
+  @media screen and (max-width: 700px) {
+    .text{
+        width: 90%;
+    }
+    
+  }
+
+.h2{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1em;
+}
+  
+
+.img-1{
+    display: flex;
+    width: 50%;
+    margin-top: -5%;
+    scale: 1.1;
+}
+  
+  @media screen and (max-width: 700px) {
+    .img-1{
+        margin-top: 0;
+        width: 90%;
+        margin: -20% 0 10% auto;
+    }
+  
+  }
+
+
+
+  .banner2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 5%;
+    color: black;
+    /* background-color: green; */
+    align-items: center;
+    margin: 0 5% 100px 5%;
+}
+.banner2 h2{
+    font-weight: 900;
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.banner2 .text {
+    width: 70%;
+    text-align: center;
+    font-size: 1.2em;
+    
+}
+.banner2 .gallery{
+display: flex;
+width: 100%;
+align-items: center;
+justify-content: space-around;
+text-align: center;
+
+
+/* background-color: red; */
+}
+
+.banner2 .gallery_item {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-weight: 0;
+
+ }
+
+
+ .banner2 .gallery_item h3 {
+  font-weight: 700;
+ }
+.banner2 .gallery_item img {
+        width: 100%;   
+        /* scale: 0.8;     */
+}
+
+.services_card{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    transition:  scale 0.4s ease-in-out;
+
+
+}
+.services_card  h3{
+   
+    font-weight: 700;
+
+}
+.services_card:hover h3{
+    color: #3465E0;
+}
+
+.services_card:hover img{
+    scale: 1.05;
+    transition:  scale 0.4s ease-in-out;
+
+}
+
+.services_card img{
+    /* aspect-ratio: 1/1; */
+    height: 70px;
+    margin-right: 10px;
+    transition:  scale 0.4s ease-in-out;
+
+}
+
+
+
+
+
+@media screen and (max-width:500px) {
+    .banner2 .gallery {
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+        gap: 50px;
+    }
+    .banner2 .gallery_item{
+        width: 90%;
+        margin-bottom: -30px;
+    }
+  .services_card {
+    margin-bottom: 40px;
+  }
+    .services_card div{
+        width: 70%;
+        margin: 0 auto
+    }
+  .services_card h3{
+    text-align: center;
+  }
+  .services_card img {
+    align-self: center;
+  }
+  .services_card p {
+    text-align: center;
+  }
+
+    
+}
+
+
+.Layout-1{
+  width: 100%;
+  align-items: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 3% 5%;
+  justify-content: space-evenly;
+}
+.Layout-1 h2{
+  /* font-size: 2em; */
+  line-height: 1em;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 50px;
+}
+Div{
+    display: flex;
+    gap: 7%;
+}
+ 
+  @media screen and (max-width: 600px) { 
+    Div{
+        flex-direction: column;
+    }
+    
+  }
