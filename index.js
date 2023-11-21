@@ -1,13 +1,3 @@
-const phrase = document.querySelector('.phrase')
-const btn = document.querySelector('.btn');
-
-
-if (phrase == "") {
-      console.log('not selected');
-} else{
-   console.log("log in");  
-}
-
 
 
 document.getElementById("search").addEventListener("click", () => {
