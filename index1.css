@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+.container{
+  width: 100%;
+  overflow-x: hidden;
+}
 .layout{
     display: flex;
     background-color: white;
@@ -10,7 +14,7 @@
     align-items: center;
     height: auto;
     min-height: 90px;
-    max-height: 110px;
+    max-height: 10px;
     border-bottom: 1px solid #EAE9E9;
     position: sticky;
     top: 0px;
@@ -24,11 +28,18 @@
     display: flex;
     margin-left: 3%;
     margin-right: auto;
-    width: 80px;
+    width: 60px;
     height: 80px;
     
     }
-    
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      cursor: pointer;
+      color: #3465E0;
+    }
     .btn{
     appearance: none;
     border-style: none;
@@ -260,3 +271,86 @@ Div{
     }
     
   }
+
+
+  .Layout-2{
+    width: 100%;
+    align-items: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5% 3% 5%;
+    justify-content: center;
+    
+  }
+  .Layout-2 h2{
+    font-size: 2em;
+    margin-top: 40px;
+    line-height: 1em;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  Div{
+      display: flex;
+      gap: 4%;
+  }
+   
+    @media screen and (max-width: 600px) { 
+      Div{
+          flex-direction: column;
+          margin: 2px;
+      }
+      
+    }
+  
+
+
+footer{
+  align-items: center;
+  display: flex;
+  background-color: #151c26;
+  width: 100%;
+  padding: 4% 3%;
+}
+
+/* 
+.logo{
+  display: flex;
+margin-left: 3%;
+margin-right: auto;
+width: 150px;
+}
+ */
+
+Text{
+  display: flex;
+font-size: small;
+margin-right: 3%;
+gap: 20px;
+color: grey;
+}
+
+@media screen and (max-width: 600px) {
+  Text{
+    flex-direction: column;
+    gap: 0;
+  }
+  
+}
+
+.Div{
+  color: grey;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+.Div:hover{
+  color: white;
+}
+@media screen and (max-width: 600px) {
+    .Div{
+      font-weight: 600;
+      font-size: 1em;
+    }
+  
+}
