@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+button .tablinks{
+  font-size: 2px;
+}
 .container{
   width: 100%;
   overflow-x: hidden;
