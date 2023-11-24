@@ -8,7 +8,11 @@ button .tablinks{
 }
 .container{
   width: 100%;
+ 
+}
+body{
   overflow-x: hidden;
+  /* overflow-y: hidden; */
 }
 .layout{
     display: flex;
@@ -81,6 +85,10 @@ button .tablinks{
     .Layout{
         flex-direction: column-reverse;
         gap: 10%;
+        
+    }
+    body{
+      overflow-x: hidden;
     }
     
   }
@@ -305,6 +313,7 @@ Div{
           flex-direction: column;
           margin: 2px;
       }
+      
       
     }
   
